@@ -1,0 +1,16 @@
+{
+  "name": "cli/git-branch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module" ,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "./index.js",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@clack/prompts": "^0.10.1"
+  }
+}
