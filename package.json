@@ -1,5 +1,5 @@
 {
-  "name": "@cli/git-branch",
+  "name": "git-branch-test",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module" ,
