@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { select } from '@clack/prompts';
 import createOriginalBranch from './options/createOriginalBranch.js';
 // import { createTemporalBranch } from './options/createTemporalBranch.js';
