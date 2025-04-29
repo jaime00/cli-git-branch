@@ -3,7 +3,7 @@ import { execSync } from 'child_process';
 import getEnviroment from '../getters/getEnviroment.js';
 import getCurrentBranch from '../getters/getCurrentBranch.js';
 
-const createTemporalBranch = async (branchName) => {
+const createTemporalBranch = async () => {
   try {
     const enviroment = await getEnviroment();
     const branchName = getCurrentBranch();
@@ -12,9 +12,11 @@ const createTemporalBranch = async (branchName) => {
     execSync(`git checkout -b ${tempBranchName} origin/${enviroment}`, {
       stdio: 'inherit',
     });
+    log.success('Rama temporal creada correctamente');
 
     // Paso 2: Fusionar los cambios de la rama original
     execSync(`git merge origin/${branchName}`, { stdio: 'inherit' });
+    log.success('Rama temporal fusionada correctamente');
 
     // Paso 3: Verificar si hay conflictos
     const status = execSync('git status --porcelain', { encoding: 'utf-8' });
@@ -40,7 +42,6 @@ const createTemporalBranch = async (branchName) => {
       execSync(`git branch -D ${tempBranchName}`, { stdio: 'inherit' });
       log.info('Rama temporal eliminada correctamente');
     }
-    log.success('Rama temporal creada correctamente');
   } catch (error) {
     console.error('Error al crear la rama temporal:', error);
   }
