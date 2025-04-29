@@ -14,4 +14,4 @@ const action = await select({
 });
 
 if (action === 'CRO') await createOriginalBranch();
-if (action === 'CRT') createTemporalBranch();
+if (action === 'CRT') await createTemporalBranch();
