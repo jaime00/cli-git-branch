@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { select } from '@clack/prompts';
 import createOriginalBranch from './options/createOriginalBranch.js';
-// import { createTemporalBranch } from './options/createTemporalBranch.js';
+import createTemporalBranch from './options/createTemporalBranch.js';
 
 const action = await select({
   message: 'Acciones',
@@ -14,4 +14,4 @@ const action = await select({
 });
 
 if (action === 'CRO') await createOriginalBranch();
-// if (action === 'CRT') createTemporalBranch(action, enviroment);
+if (action === 'CRT') createTemporalBranch();

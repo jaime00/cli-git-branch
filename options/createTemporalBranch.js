@@ -1,13 +1,17 @@
-import { select, text } from '@clack/prompts';
+import { log, select, text } from '@clack/prompts';
 import { execSync } from 'child_process';
-import { getEnviroment } from '../getters';
+import getEnviroment from '../getters/getEnviroment.js';
+import getCurrentBranch from '../getters/getCurrentBranch.js';
 
-export const createTemporalBranch = async (branchName) => {
+const createTemporalBranch = async (branchName) => {
   try {
-    const enviroment = getEnviroment()
+    const enviroment = await getEnviroment();
+    const branchName = getCurrentBranch();
     // Paso 1: Crear y cambiar a la nueva rama temporal
     const tempBranchName = `${branchName}-${enviroment}`;
-    execSync(`git checkout -b ${tempBranchName} origin/${enviroment}`, { stdio: 'inherit' });
+    execSync(`git checkout -b ${tempBranchName} origin/${enviroment}`, {
+      stdio: 'inherit',
+    });
 
     // Paso 2: Fusionar los cambios de la rama original
     execSync(`git merge origin/${branchName}`, { stdio: 'inherit' });
@@ -23,7 +27,6 @@ export const createTemporalBranch = async (branchName) => {
     execSync(`git push origin ${tempBranchName}`, { stdio: 'inherit' });
     log.info('Rama acaba de ser pusheada al repositorio remoto');
 
-
     const hasToRemoveTemporalBranch = await select({
       message: '¿Deseas remover el branch temporal?',
       options: [
@@ -38,8 +41,8 @@ export const createTemporalBranch = async (branchName) => {
       log.info('Rama temporal eliminada correctamente');
     }
     log.success('Rama temporal creada correctamente');
-
-  } catch (error) { 
+  } catch (error) {
     console.error('Error al crear la rama temporal:', error);
   }
 };
+export default createTemporalBranch;
