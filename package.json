@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "gf": "./index.js",
-    "gfjs": "./index.js"
+    "gfjs": "./index.js",
+    "git-flow-js": "./index.js"
   },
   "author": "",
   "license": "ISC",
