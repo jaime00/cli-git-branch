@@ -1,5 +1,5 @@
 const validateTicketOfJIRA = (ticket) => {
-  const regex = /^DPW-\d{4}$/;
+  const regex = /^[A-Z]{3}-\d{4}$/;
   return regex.test(ticket);
 };
 

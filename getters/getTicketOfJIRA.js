@@ -3,13 +3,13 @@ import validateTicketOfJIRA from '../utils/validateTicketOfJIRA.js';
 
 const getTicketOfJIRA = async () => {
   return await text({
-    message: 'Código de ticket de JIRA:',
+    message: '🎫 Enter the JIRA ticket code:',
     placeholder: 'DPW-0000',
     initialValue: '',
     validate(value) {
-      if (value.length === 0) return `El código de JIRA es requerido!`;
+      if (value.length === 0) return `⚠️ JIRA code is required!`;
       if (!validateTicketOfJIRA(value))
-        return `El código de JIRA no cumple con el formato DPW-0000`;
+        return `❌ JIRA code must have the format DPW-0000`;
     },
   });
 };

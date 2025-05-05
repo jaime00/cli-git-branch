@@ -6,16 +6,15 @@ import createBranchName from './createBranchName.js';
 const createOriginalBranch = async () => {
   const branchName = await createBranchName();
   const s = spinner();
-  // Ejecutar comandos git
   try {
-    s.start('Creando...');
+    s.start('🌱 Creating original branch...');
     execSync(`git checkout -b ${branchName} origin/master`, { stdio: 'inherit' });
-    s.stop(`Rama creada correctamente (${branchName})`);
-    log.success(`Rama: ${branchName} creada correctamente.`);
+    s.stop(`✅ Branch created successfully: ${branchName}`);
+    log.success(`🎉 Branch "${branchName}" created successfully!`);
 
   } catch (error) {
     s.stop();
-    log.error(error.message);
+    log.error(`❌ Error: ${error.message}`);
   }
 };
 

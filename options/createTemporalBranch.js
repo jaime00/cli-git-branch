@@ -12,27 +12,27 @@ const createTemporalBranch = async () => {
     execSync(`git checkout -b ${tempBranchName} origin/${enviroment}`, {
       stdio: 'inherit',
     });
-    log.success('Rama temporal creada correctamente');
+    log.success('🌿 Temporal branch created successfully');
 
     // Paso 2: Fusionar los cambios de la rama original
     execSync(`git merge origin/${branchName}`, { stdio: 'inherit' });
-    log.success('Rama temporal fusionada correctamente');
+    log.success('🔀 Temporal branch merged successfully');
 
     // Paso 3: Verificar si hay conflictos
     const status = execSync('git status --porcelain', { encoding: 'utf-8' });
     if (status.includes('UU')) {
       // Paso 4: Resolver conflictos
-      log.warn('Conflictos detectados. Por favor, resuélvelos manualmente.');
+      log.warn('⚠️ Conflicts detected. Please resolve them manually!');
       return;
     }
 
     execSync(`git push origin ${tempBranchName}`, { stdio: 'inherit' });
-    log.info('Rama acaba de ser pusheada al repositorio remoto');
+    log.info('🚀 Branch pushed to remote repository');
 
     const hasToRemoveTemporalBranch = await select({
-      message: '¿Deseas remover el branch temporal?',
+      message: 'Do you want to remove the temporal branch?',
       options: [
-        { value: true, label: 'SI' },
+        { value: true, label: 'Yes' },
         { value: false, label: 'No' },
       ],
     });
@@ -40,10 +40,10 @@ const createTemporalBranch = async () => {
     if (hasToRemoveTemporalBranch) {
       execSync(`git checkout ${branchName}`, { stdio: 'inherit' });
       execSync(`git branch -D ${tempBranchName}`, { stdio: 'inherit' });
-      log.info('Rama temporal eliminada correctamente');
+      log.info('🗑️ Temporal branch deleted successfully');
     }
   } catch (error) {
-    console.error('Error al crear la rama temporal:', error);
+    console.error('❌ Error creating the temporal branch:', error);
   }
 };
 export default createTemporalBranch;
