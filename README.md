@@ -48,7 +48,7 @@ gfjs
 
 | Command | Description |
 | ---------------------------- | --------------------------------------------- |
-| `git-flow-js`, `gfjs` | Run the interactive flow to manage branches |
+| `git-flow-js`, `gfjs`, `asd` | Run the interactive flow to manage branches (note: `asd` is a special Easter egg 🥚) |
 | `-version`, `-v` | Display the installed version |
 | `-help`, `-h` *(under construction 🚧)* | Display help or usage information |
 
@@ -74,6 +74,7 @@ git-flow-js/
 │ └── utils/
 │ └── validateTicketOfJIRA.js
 ├── index.js
+├── build.js
 ├── package.json
 └── README.md
 ```
@@ -90,7 +91,7 @@ git clone https://github.com/jaime00/git-flow-js.git
 cd git-flow-js
 npm install
 npm link
-git-flow-js # or use the abbreviated version gfjs
+git-flow-js # or use the abbreviated version with gfjs or asd
 
 ```
 
