@@ -38,7 +38,6 @@ or
 ```bash
 gfjs
 ```
-![Basic Use Example](https://raw.githubusercontent.com/jaime00/git-flow-js/refs/heads/main/public/gfjs-dark.png)
 
 ---
 
