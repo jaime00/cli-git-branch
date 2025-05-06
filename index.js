@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import { select, intro, outro, cancel } from '@clack/prompts';
 import chalk from 'chalk';
 import createOriginalBranch from './src/actions/createOriginalBranch.js';
