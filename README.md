@@ -38,7 +38,7 @@ or
 ```bash
 gfjs
 ```
-![Basic Use Example](public/gfjs-dark.png)
+![Basic Use Example](./public/gfjs-dark.png)
 
 ---
 
