@@ -60,7 +60,6 @@ gfjs
 The project is organized in a modular fashion for easy maintenance and extension. The main directory and file structure is detailed below:
 ```
 git-flow-js/
-├── public/
 ├── src/
 │ ├── actions/
 │ │ ├── createOriginalBranch.js

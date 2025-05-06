@@ -9,7 +9,8 @@ const createOriginalBranch = async () => {
   try {
     s.start('🌱 Creating original branch...');
     execSync(`git checkout -b ${branchName} origin/master`, { stdio: 'inherit' });
-    s.stop(`✅ Branch created successfully: ${branchName}`);
+    execSync(`git push origin ${branchName}`, { stdio: 'inherit' });
+    s.stop(`✅ Branch "${branchName}" created and pushed to remote successfully!`);
     log.success(`🎉 Branch "${branchName}" created successfully!`);
 
   } catch (error) {

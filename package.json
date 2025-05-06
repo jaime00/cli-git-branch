@@ -1,6 +1,6 @@
 {
   "name": "git-flow-js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -10,11 +10,25 @@
     "gfjs": "./index.js",
     "git-flow-js": "./index.js"
   },
-  "author": "",
+  "author": "Jaime Torres",
   "license": "MIT",
-  "description": "",
+  "description": "A CLI tool that simplifies branch management in Git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaime00/git-flow-js"
+  },
+  "keywords": [
+    "git",
+    "cli",
+    "branch",
+    "workflow",
+    "automation"
+  ],
   "dependencies": {
     "@clack/prompts": "^0.10.1",
     "chalk": "^5.4.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
