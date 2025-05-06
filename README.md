@@ -1,22 +1,21 @@
 # 📦 git-flow-js
 
-`git-flow-js` es una herramienta CLI que simplifica la gestión de ramas en Git. Automatiza flujos de trabajo comunes y mantiene una estructura de ramas consistente.
+`git-flow-js` is a CLI tool that simplifies branch management in Git. It automates common workflows and maintains a consistent branch structure.
 
 [![npm version](https://img.shields.io/npm/v/git-flow-js.svg)](https://www.npmjs.com/package/git-flow-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/jaime00/git-flow-js.svg)](https://github.com/jaime00/git-flow-js/stargazers)
-
 ---
 
-## 🚀 Instalación
+## 🚀 Installation
 
-Instálalo globalmente con npm:
+Install it globally with npm:
 
 ```bash
 npm install -g git-flow-js
 ````
 
-O clónalo y enlázalo localmente para desarrollo:
+Or clone it and Link it locally for development:
 
 ```bash
 git clone https://github.com/jaime00/git-flow-js.git
@@ -27,88 +26,88 @@ npm link
 
 ---
 
-## ⚙️ Uso
+## ⚙️ Usage
 
-Ejecuta el comando principal desde la raíz de tu repositorio Git:
+Run the main command from the root of your Git repository:
 
 ```bash
 git-flow-js
 ```
-o
+or
 
 ```bash
 gfjs
 ```
-![Basic Use Example](examples/gfjs-dark.png)
-
-
----
-
-## 🧰 Comandos Disponibles
-
-| Comando                      | Descripción                                       |
-| ---------------------------- | ------------------------------------------------- |
-| `git-flow-js`, `gfjs`                | Ejecuta el flujo interactivo para gestionar ramas |
-| `-version`, `-v`            | Muestra la versión instalada                      |
-| `-help`, `-h` *(en construcción 🚧)* | Muestra ayuda o información de uso                |
+![Basic Use Example](public/gfjs-dark.png)
 
 ---
 
-## 📁 Estructura Interna del Proyecto
+## 🧰 Available Commands
 
-Algunos comandos pueden apoyarse en los siguientes archivos y carpetas:
+| Command | Description |
+| ---------------------------- | --------------------------------------------- |
+| `git-flow-js`, `gfjs` | Run the interactive flow to manage branches |
+| `-version`, `-v` | Display the installed version |
+| `-help`, `-h` *(under construction 🚧)* | Display help or usage information |
 
+---
+
+## 📁 Project Structure
+
+The project is organized in a modular fashion for easy maintenance and extension. The main directory and file structure is detailed below:
 ```
 git-flow-js/
+├── public/
+├── src/
+│ ├── actions/
+│ │ ├── createOriginalBranch.js
+│ │ ├── createTemporalBranch.js
+│ │ └── createBranchName.js
+│ ├── getters/
+│ │ ├── getCurrentPackageVersion.js
+│ │ ├── getBranchType.js
+│ │ ├── getTicketOfJIRA.js
+│ │ ├── getEnviroment.js
+│ │ └── getCurrentBranch.js
+│ └── utils/
+│ └── validateTicketOfJIRA.js
 ├── index.js
-├── actions/
-│   ├── createOriginalBranch.js
-│   ├── createTemporalBranch.js
-│   └── createBranchName.js
-├── getters/
-│   ├── getCurrentPackageVersion.js
-│   ├── getBranchType.js
-│   ├── getTicketOfJIRA.js
-│   ├── getEnviroment.js
-│   └── getCurrentBranch.js
-├── utils/
-│   └── validateTicketOfJIRA.js
-├── README.md
 ├── package.json
-├── .gitignore
-└── .git/
+└── README.md
 ```
 
 ---
 
-## 🛠️ Contribuir
+## 🛠️ Contribute
 
-¡Contribuciones bienvenidas! Para comenzar:
+Contributions welcome! To get started:
 
 ```bash
 git clone https://github.com/jaime00/git-flow-js.git
 cd git-flow-js
 npm install
 npm link
+git-flow-js # or use the abbreviated version gfjs
+
 ```
 
-Por favor, abre un [issue](https://github.com/jaime00/git-flow-js/issues) para reportar bugs o sugerir mejoras.
+Please open an [issue](https://github.com/jaime00/git-flow-js/issues) to report bugs or suggest improvements.
 
 ---
 
-## 📝 Licencia
+## 📝 License
 
-Distribuido bajo la licencia [MIT](LICENSE).
+Distributed under the MIT [License](LICENSE).
 
 ---
 
-## 📬 Contacto
+## 📬 Contact
 
-- 🌐 **Portfolio**: [Visita mi sitio web](https://jaime00portfolio.netlify.app/)
+- 🌐 **Portfolio**: [Visit my website](https://jaime00portfolio.netlify.app/)
 - 💼 **LinkedIn**: [linkedin.com/in/jaime00](https://www.linkedin.com/in/jaime00)
-- 📧 **Email**: [imjaimetorresv@gmail.com](mailto:tu-email@ejemplo.com)
+- 📧 **Email**: [imjaimetorresv@gmail.com](mailto:your-email@example.com)
 - 🐙 **GitHub**: [github.com/jaime00](https://github.com/jaime00)
 
-Para contribuciones, reporte de bugs o sugerencias, por favor abre un [issue](https://github.com/jaime00/git-flow-js/issues) en el repositorio.
+For contributions, bug reports, or suggestions, please open an [issue](https://github.com/jaime00/git-flow-js/issues) in the repository.
 
 ---

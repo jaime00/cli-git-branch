@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import { select, intro, outro, cancel } from '@clack/prompts';
 import chalk from 'chalk';
-import createOriginalBranch from './actions/createOriginalBranch.js';
-import createTemporalBranch from './actions/createTemporalBranch.js';
-import getCurrentPackageVersion from './getters/getCurrentPackageVersion.js';
+import createOriginalBranch from './src/actions/createOriginalBranch.js';
+import createTemporalBranch from './src/actions/createTemporalBranch.js';
+import getCurrentPackageVersion from './src/getters/getCurrentPackageVersion.js';
 
 const args = process.argv.slice(2);
 
