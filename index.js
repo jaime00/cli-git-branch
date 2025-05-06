@@ -1,8 +1,16 @@
 #!/usr/bin/env node
 import { select, intro, outro, cancel } from '@clack/prompts';
 import chalk from 'chalk';
-import createOriginalBranch from './options/createOriginalBranch.js';
-import createTemporalBranch from './options/createTemporalBranch.js';
+import createOriginalBranch from './actions/createOriginalBranch.js';
+import createTemporalBranch from './actions/createTemporalBranch.js';
+import getCurrentPackageVersion from './getters/getCurrentPackageVersion.js';
+
+const args = process.argv.slice(2);
+
+if (args.includes('-v') || args.includes('--version')) {
+  console.log("git flow js version:", getCurrentPackageVersion());
+  process.exit(0);
+}
 
 // Welcome banner
 intro(

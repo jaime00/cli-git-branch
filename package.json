@@ -1,6 +1,6 @@
 {
   "name": "git-flow-js",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -11,11 +11,10 @@
     "git-flow-js": "./index.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "@clack/prompts": "^0.10.1",
-    "chalk": "^5.4.1",
-    "git-branch-test": "^1.0.1"
+    "chalk": "^5.4.1"
   }
 }
