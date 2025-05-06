@@ -7,6 +7,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/jaime00/git-flow-js.svg)](https://github.com/jaime00/git-flow-js/stargazers)
 ---
 
+
 ## 🚀 Installation
 
 Install it globally with npm:
@@ -26,6 +27,7 @@ npm link
 
 ---
 
+
 ## ⚙️ Usage
 
 Run the main command from the root of your Git repository:
@@ -41,6 +43,7 @@ gfjs
 
 ---
 
+
 ## 🧰 Available Commands
 
 | Command | Description |
@@ -50,6 +53,7 @@ gfjs
 | `-help`, `-h` *(under construction 🚧)* | Display help or usage information |
 
 ---
+
 
 ## 📁 Project Structure
 
@@ -77,6 +81,7 @@ git-flow-js/
 
 ---
 
+
 ## 🛠️ Contribute
 
 Contributions welcome! To get started:
@@ -94,11 +99,13 @@ Please open an [issue](https://github.com/jaime00/git-flow-js/issues) to report 
 
 ---
 
+
 ## 📝 License
 
 Distributed under the MIT [License](LICENSE).
 
 ---
+
 
 ## 📬 Contact
 
