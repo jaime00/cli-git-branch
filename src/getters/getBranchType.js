@@ -1,7 +1,8 @@
-import { select } from '@clack/prompts';
+import { select, isCancel } from '@clack/prompts'
+import handleUserCancellation from '../utils/handleUserCancellation.js'
 
 const getBranchType = async () => {
-  return await select({
+  const branch = await select({
     message: '🌳 Select the branch type:',
     options: [
       { value: 'fix', label: '🐞 Fix' },
@@ -9,7 +10,9 @@ const getBranchType = async () => {
       { value: 'feature', label: '🚀 Feature' },
       { value: 'refactor', label: '🔨 Refactor' },
     ],
-  });
-};
+  })
+  handleUserCancellation(branch)
+  return branch
+}
 
-export default getBranchType;
+export default getBranchType

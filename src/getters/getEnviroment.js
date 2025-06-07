@@ -1,7 +1,8 @@
-import { select } from '@clack/prompts';
+import { select } from '@clack/prompts'
+import handleUserCancellation from '../utils/handleUserCancellation.js'
 
 const getEnviroment = async () => {
-  return await select({
+  const enviroment = await select({
     message: '🌍 ¿A qué rama deseas hacer merge?',
     options: [
       { value: 'develop', label: '🧪 develop (DEV)' },
@@ -9,6 +10,8 @@ const getEnviroment = async () => {
     ],
     required: true,
     initialValue: 'develop',
-  });
-};
-export default getEnviroment;
+  })
+  handleUserCancellation(enviroment)
+  return enviroment
+}
+export default getEnviroment

@@ -111,7 +111,7 @@ Distributed under the MIT [License](LICENSE).
 
 - 🌐 **Portfolio**: [Visit my website](https://jaime00portfolio.netlify.app/)
 - 💼 **LinkedIn**: [linkedin.com/in/jaime00](https://www.linkedin.com/in/jaime00)
-- 📧 **Email**: [imjaimetorresv@gmail.com](mailto:your-email@example.com)
+- 📧 **Email**: [imjaimetorresv@gmail.com](mailto:imjaimetorresv@gmail.com)
 - 🐙 **GitHub**: [github.com/jaime00](https://github.com/jaime00)
 
 For contributions, bug reports, or suggestions, please open an [issue](https://github.com/jaime00/git-flow-js/issues) in the repository.

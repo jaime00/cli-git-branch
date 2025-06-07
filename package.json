@@ -1,6 +1,6 @@
 {
   "name": "git-flow-js",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "dist/index.js",
   "type": "module",
   "author": "Jaime Torres",
@@ -16,7 +16,16 @@
   "bin": {
     "asd": "dist/index.js",
     "gfjs": "dist/index.js",
-    "git-flow-js": "dist/index.js"
+    "git-flow-js": "dist/index.js",
+    "pull": "dist/git.js",
+    "push": "dist/git.js",
+    "removelast": "dist/git.js",
+    "mergewith": "dist/git.js",
+    "commit": "dist/git.js",
+    "log": "dist/git.js",
+    "run": "dist/run.js",
+    "runrun": "dist/run.js",
+    "i": "dist/install.js"
   },
   "files": [
     "./dist"
@@ -32,7 +41,8 @@
   ],
   "dependencies": {
     "@clack/prompts": "^0.10.1",
-    "chalk": "^5.4.1"
+    "chalk": "^5.4.1",
+    "picocolors": "^1.0.0"
   },
   "engines": {
     "node": ">=14.0.0"

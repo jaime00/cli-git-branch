@@ -40,7 +40,7 @@ const action = await select({
 if (action === 'CRO') await createOriginalBranch();
 else if (action === 'CRT') await createTemporalBranch();
 else {
-  cancel('❌ No action was selected. Exiting...');
+  cancel('❌ The operation was cancelled. Exiting...');
   process.exit(0);
 }
 
