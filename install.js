@@ -5,11 +5,11 @@ import os from 'os'
 import path from 'path'
 
 import getLastConfig from './src/getters/install/config/getLastConfig.js'
-import addnewConfig from './src/install-actions/addNewConfig.js'
-import generateNpmrc from './src/install-actions/generateNpmrc.js'
-import dropCurrentConfig from './src/install-actions/dropCurrentConfig.js'
-import getCurrentConfig from './src/install-actions/getCurrentConfig.js'
-import showCurrentConfig from './src/install-actions/showCurrentConfig.js'
+import addnewConfig from './src/actions/install/addNewConfig.js'
+import generateNpmrc from './src/actions/install/generateNpmrc.js'
+import dropCurrentConfig from './src/actions/install/dropCurrentConfig.js'
+import getCurrentConfig from './src/actions/install/getCurrentConfig.js'
+import showCurrentConfig from './src/actions/install/showCurrentConfig.js'
 
 try {
   const configPath = path.join(os.homedir(), 'config.js')
