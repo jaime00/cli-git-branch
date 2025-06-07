@@ -1,6 +1,5 @@
 import { existsSync } from 'fs'
 import { log, cancel } from '@clack/prompts'
-import { text } from '@clack/prompts'
 import chalk from 'chalk'
 import os from 'os'
 import path from 'path'
@@ -11,29 +10,6 @@ import generateNpmrc from './src/install-actions/generateNpmrc.js'
 import dropCurrentConfig from './src/install-actions/dropCurrentConfig.js'
 import getCurrentConfig from './src/install-actions/getCurrentConfig.js'
 import showCurrentConfig from './src/install-actions/showCurrentConfig.js'
-
-const URL = await text({
-  message: '🔗 Enter your NPM registry URL (without http/https):',
-  placeholder: '',
-  initialValue: '',
-  required: true,
-  validate(value) {
-    if (!value?.trim()) return `⚠️ Endpoint URL is required!`
-
-    if (!/^[a-zA-Z0-9]/.test(value[0].trim())) {
-      return `❌ URL must start with a name only, avoid special characters`
-    }
-    if (value.startsWith('http')) {
-      return `❌ URL must not include 'http/https' protocol and must start with a letter`
-    }
-    if (value.startsWith('/')) {
-      return `❌ URL must not start with '/' and must begin with a letter or number`
-    }
-    if (value.startsWith('www')) {
-      return `❌ URL must not start with 'www' and must begin with a letter or number`
-    }
-  },
-})
 
 try {
   const configPath = path.join(os.homedir(), 'config.js')
