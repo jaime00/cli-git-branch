@@ -48,19 +48,19 @@ eg
 
 | Command | Description |
 | ---------------------------- | --------------------------------------------- |
-| `eazy-git`, `eg`, `asd` | Launch the interactive CLI to create and manage Git branches (note: `asd` is an little easter egg command 🥚) |
-| `pull` | Pull from head |
-| `push` | Push to head |
-| `removelast` | Remove last commit |
-| `mergewith` | Merge with another origin branch |
-| `commit` | Commit changes |
-| `back` | Go back to previous branch |
-| `log` | Show commit log |
-| `run` | npm run dev |
-| `runrun` | Remove .next folder and run dev |
-| `i` | Install dependencies with auth token |
-| `-version`, `-v` | Display the installed version |
-| `-help`, `-h` *(under construction 🚧)* | Display help or usage information |
+| `eazy-git`, `eg`, `asd` | Launch the interactive CLI to create and manage Git branches (note: `asd` is an easter egg command 🥚) |
+| `pull` | Pull latest changes from remote repository (`git pull origin HEAD`) |
+| `push` | Push local changes to remote repository (`git push origin HEAD`) |
+| `removelast` | Undo last commit while preserving changes in working directory |
+| `mergewith` | Merge current branch with another remote branch (defaults to `origin/develop`) |
+| `commit` | Stage and commit changes with an interactive prompt |
+| `back` | Switch back to the previously checked out branch |
+| `log` | Display formatted commit history with details |
+| `run` | Start development server (`npm run dev`) |
+| `runrun` | Clean development server restart (removes `.next` folder and runs `npm run dev`) |
+| `i` | Install project dependencies using configured auth token |
+| `-version`, `-v` | Display installed package version |
+| `-help`, `-h` *(under construction 🚧)* | Show command usage and documentation |
 
 ---
 
