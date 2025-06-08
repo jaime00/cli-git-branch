@@ -1,8 +1,10 @@
 import { select, intro, outro, cancel } from '@clack/prompts';
 import chalk from 'chalk';
+
 import createOriginalBranch from './src/actions/git/createOriginalBranch.js';
 import createTemporalBranch from './src/actions/git/createTemporalBranch.js';
 import getCurrentPackageVersion from './src/getters/git/getCurrentPackageVersion.js';
+import hasGitInstalled from './src/utils/hasGitInstalled.js';
 
 const args = process.argv.slice(2);
 
@@ -10,6 +12,8 @@ if (args.includes('-v') || args.includes('--version')) {
   console.log("eazy-git version:", getCurrentPackageVersion());
   process.exit(0);
 }
+
+hasGitInstalled();
 
 // Welcome banner
 intro(

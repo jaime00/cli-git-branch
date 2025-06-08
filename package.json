@@ -23,6 +23,7 @@
     "mergewith": "dist/git.js",
     "commit": "dist/git.js",
     "back": "dist/git.js",
+    "checkout": "dist/git.js",
     "log": "dist/git.js",
     "run": "dist/run.js",
     "runrun": "dist/run.js",

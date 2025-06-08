@@ -55,6 +55,7 @@ eg
 | `mergewith` | Merge current branch with another remote branch (defaults to `origin/develop`) |
 | `commit` | Stage and commit changes with an interactive prompt |
 | `back` | Switch back to the previously checked out branch |
+| `checkout` | Switch to a specified branch or return to the previous branch if no branch name is provided |
 | `log` | Display formatted commit history with details |
 | `run` | Start development server (`npm run dev`) |
 | `runrun` | Clean development server restart (removes `.next` folder and runs `npm run dev`) |
@@ -73,7 +74,7 @@ eazy-git/
 ├── src/
 │   ├── actions/
 │   │   ├── git/
-│   │   │   ├── back.js
+│   │   │   ├── checkout.js
 │   │   │   ├── commit.js
 │   │   │   ├── createBranchName.js
 │   │   │   ├── createOriginalBranch.js
@@ -82,12 +83,14 @@ eazy-git/
 │   │   │   ├── pull.js
 │   │   │   ├── push.js
 │   │   │   └── removelast.js
-│   │   └── install/
-│   │       ├── addNewConfig.js
-│   │       ├── dropCurrentConfig.js
-│   │       ├── generateNpmrc.js
-│   │       ├── getCurrentConfig.js
-│   │       └── showCurrentConfig.js
+│   │   ├── install/
+│   │   │   ├── addNewConfig.js
+│   │   │   ├── dropCurrentConfig.js
+│   │   │   ├── generateNpmrc.js
+│   │   │   ├── getCurrentConfig.js
+│   │   │   └── showCurrentConfig.js
+│   │   └── run/
+│   │       └── commands.js
 │   ├── getters/
 │   │   ├── git/
 │   │   │   ├── getBranchType.js
@@ -104,12 +107,12 @@ eazy-git/
 │   │       └── token/
 │   │           ├── getApiKey.js
 │   │           └── getEndpointURL.js
-│   ├── utils/
-│   │   ├── handleUserCancellation.js
-│   │   ├── isEmpty.js
-│   │   └── validateTicketOfJIRA.js
-│   └── run-actions/
-│       └── commands.js
+│   └── utils/
+│       ├── handleUserCancellation.js
+│       ├── hasGitInstalled.js
+│       ├── isEmpty.js
+│       └── validateTicketOfJIRA.js
+│       
 ├── build.js
 ├── git.js
 ├── index.js
