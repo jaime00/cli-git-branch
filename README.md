@@ -38,7 +38,7 @@ easy-git
 or
 
 ```bash
-gfjs
+eg
 ```
 
 ---
@@ -48,7 +48,7 @@ gfjs
 
 | Command | Description |
 | ---------------------------- | --------------------------------------------- |
-| `easy-git`, `gfjs`, `asd` | Run the interactive flow to manage branches (note: `asd` is a special Easter egg 🥚) |
+| `easy-git`, `eg`, `asd` | Launch the interactive CLI to create and manage Git branches (note: `asd` is an little easter egg command 🥚) |
 | `pull` | Pull from head |
 | `push` | Push to head |
 | `removelast` | Remove last commit |
@@ -131,7 +131,7 @@ git clone https://github.com/jaime00/easy-git.git
 cd easy-git
 npm install
 npm link
-easy-git # or use the abbreviated version with gfjs or asd
+easy-git # or use the abbreviated version with eg or asd
 
 ```
 
