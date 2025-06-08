@@ -1,5 +1,5 @@
 {
-  "name": "easy-git",
+  "name": "eazy-git",
   "version": "0.1.7",
   "main": "dist/index.js",
   "type": "module",
@@ -8,14 +8,14 @@
   "description": "A CLI tool that simplifies branch management in Git",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaime00/easy-git.git"
+    "url": "git+https://github.com/jaime00/eazy-git.git"
   },
   "scripts": {
     "build": "node build.js"
   },
   "bin": {
     "eg": "dist/index.js",
-    "easy-git": "dist/index.js",
+    "eazy-git": "dist/index.js",
     "asd": "dist/index.js",
     "pull": "dist/git.js",
     "push": "dist/git.js",
@@ -34,7 +34,7 @@
   "keywords": [
     "cli",
     "git",
-    "easy-git",
+    "eazy-git",
     "git-branch",
     "branch",
     "automation"

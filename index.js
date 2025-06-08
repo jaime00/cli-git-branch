@@ -7,7 +7,7 @@ import getCurrentPackageVersion from './src/getters/git/getCurrentPackageVersion
 const args = process.argv.slice(2);
 
 if (args.includes('-v') || args.includes('--version')) {
-  console.log("easy-git version:", getCurrentPackageVersion());
+  console.log("eazy-git version:", getCurrentPackageVersion());
   process.exit(0);
 }
 

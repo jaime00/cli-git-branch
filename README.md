@@ -1,10 +1,10 @@
-# 📦 easy-git
+# 📦 eazy-git
 
-`easy-git` is a CLI tool that simplifies branch management in Git. It automates common workflows and maintains a consistent branch structure.
+`eazy-git` is a CLI tool that simplifies branch management in Git. It automates common workflows and maintains a consistent branch structure.
 
-[![npm version](https://img.shields.io/npm/v/easy-git.svg)](https://www.npmjs.com/package/easy-git)
+[![npm version](https://img.shields.io/npm/v/eazy-git.svg)](https://www.npmjs.com/package/eazy-git)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/jaime00/easy-git.svg)](https://github.com/jaime00/easy-git/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/jaime00/eazy-git.svg)](https://github.com/jaime00/eazy-git/stargazers)
 ---
 
 
@@ -13,14 +13,14 @@
 Install it globally with npm:
 
 ```bash
-npm install -g easy-git
+npm install -g eazy-git
 ````
 
 Or clone it and Link it locally for development:
 
 ```bash
-git clone https://github.com/jaime00/easy-git.git
-cd easy-git
+git clone https://github.com/jaime00/eazy-git.git
+cd eazy-git
 npm install
 npm link
 ```
@@ -33,7 +33,7 @@ npm link
 Run the main command from the root of your Git repository:
 
 ```bash
-easy-git
+eazy-git
 ```
 or
 
@@ -48,7 +48,7 @@ eg
 
 | Command | Description |
 | ---------------------------- | --------------------------------------------- |
-| `easy-git`, `eg`, `asd` | Launch the interactive CLI to create and manage Git branches (note: `asd` is an little easter egg command 🥚) |
+| `eazy-git`, `eg`, `asd` | Launch the interactive CLI to create and manage Git branches (note: `asd` is an little easter egg command 🥚) |
 | `pull` | Pull from head |
 | `push` | Push to head |
 | `removelast` | Remove last commit |
@@ -69,7 +69,7 @@ eg
 
 The project is organized in a modular fashion for easy maintenance and extension. The main directory and file structure is detailed below:
 ```
-easy-git/
+eazy-git/
 ├── src/
 │   ├── actions/
 │   │   ├── git/
@@ -127,15 +127,15 @@ easy-git/
 Contributions welcome! To get started:
 
 ```bash
-git clone https://github.com/jaime00/easy-git.git
-cd easy-git
+git clone https://github.com/jaime00/eazy-git.git
+cd eazy-git
 npm install
 npm link
-easy-git # or use the abbreviated version with eg or asd
+eazy-git # or use the abbreviated version with eg or asd
 
 ```
 
-Please open an [issue](https://github.com/jaime00/easy-git/issues) to report bugs or suggest improvements.
+Please open an [issue](https://github.com/jaime00/eazy-git/issues) to report bugs or suggest improvements.
 
 ---
 
@@ -154,6 +154,6 @@ Distributed under the MIT [License](LICENSE).
 - 📧 **Email**: [imjaimetorresv@gmail.com](mailto:imjaimetorresv@gmail.com)
 - 🐙 **GitHub**: [github.com/jaime00](https://github.com/jaime00)
 
-For contributions, bug reports, or suggestions, please open an [issue](https://github.com/jaime00/easy-git/issues) in the repository.
+For contributions, bug reports, or suggestions, please open an [issue](https://github.com/jaime00/eazy-git/issues) in the repository.
 
 ---
