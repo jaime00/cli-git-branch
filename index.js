@@ -1,13 +1,13 @@
 import { select, intro, outro, cancel } from '@clack/prompts';
 import chalk from 'chalk';
-import createOriginalBranch from './src/actions/createOriginalBranch.js';
-import createTemporalBranch from './src/actions/createTemporalBranch.js';
-import getCurrentPackageVersion from './src/getters/getCurrentPackageVersion.js';
+import createOriginalBranch from './src/actions/git/createOriginalBranch.js';
+import createTemporalBranch from './src/actions/git/createTemporalBranch.js';
+import getCurrentPackageVersion from './src/getters/git/getCurrentPackageVersion.js';
 
 const args = process.argv.slice(2);
 
 if (args.includes('-v') || args.includes('--version')) {
-  console.log("git flow js version:", getCurrentPackageVersion());
+  console.log("easy-git version:", getCurrentPackageVersion());
   process.exit(0);
 }
 

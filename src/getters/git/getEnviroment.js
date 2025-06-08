@@ -1,5 +1,5 @@
 import { select } from '@clack/prompts'
-import handleUserCancellation from '../utils/handleUserCancellation.js'
+import handleUserCancellation from '../../utils/handleUserCancellation.js'
 
 const getEnviroment = async () => {
   const enviroment = await select({

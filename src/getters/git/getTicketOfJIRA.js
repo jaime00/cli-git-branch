@@ -1,6 +1,6 @@
 import { text } from '@clack/prompts'
-import validateTicketOfJIRA from '../utils/validateTicketOfJIRA.js'
-import handleUserCancellation from '../utils/handleUserCancellation.js'
+import validateTicketOfJIRA from '../../utils/validateTicketOfJIRA.js'
+import handleUserCancellation from '../../utils/handleUserCancellation.js'
 
 const getTicketOfJIRA = async () => {
   const ticket = await text({

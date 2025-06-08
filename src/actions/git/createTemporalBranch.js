@@ -1,8 +1,8 @@
 import { log, confirm, text } from '@clack/prompts'
 import { execSync } from 'child_process'
-import getEnviroment from '../getters/getEnviroment.js'
-import getCurrentBranch from '../getters/getCurrentBranch.js'
-import handleUserCancellation from '../utils/handleUserCancellation.js'
+import getEnviroment from '../../getters/git/getEnviroment.js'
+import getCurrentBranch from '../../getters/git/getCurrentBranch.js'
+import handleUserCancellation from '../../utils/handleUserCancellation.js'
 
 const createTemporalBranch = async () => {
   try {

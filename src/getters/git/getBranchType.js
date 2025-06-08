@@ -1,5 +1,5 @@
 import { select, isCancel } from '@clack/prompts'
-import handleUserCancellation from '../utils/handleUserCancellation.js'
+import handleUserCancellation from '../../utils/handleUserCancellation.js'
 
 const getBranchType = async () => {
   const branch = await select({

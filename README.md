@@ -1,10 +1,10 @@
-# 📦 git-flow-js
+# 📦 easy-git
 
-`git-flow-js` is a CLI tool that simplifies branch management in Git. It automates common workflows and maintains a consistent branch structure.
+`easy-git` is a CLI tool that simplifies branch management in Git. It automates common workflows and maintains a consistent branch structure.
 
-[![npm version](https://img.shields.io/npm/v/git-flow-js.svg)](https://www.npmjs.com/package/git-flow-js)
+[![npm version](https://img.shields.io/npm/v/easy-git.svg)](https://www.npmjs.com/package/easy-git)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/jaime00/git-flow-js.svg)](https://github.com/jaime00/git-flow-js/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/jaime00/easy-git.svg)](https://github.com/jaime00/easy-git/stargazers)
 ---
 
 
@@ -13,14 +13,14 @@
 Install it globally with npm:
 
 ```bash
-npm install -g git-flow-js
+npm install -g easy-git
 ````
 
 Or clone it and Link it locally for development:
 
 ```bash
-git clone https://github.com/jaime00/git-flow-js.git
-cd git-flow-js
+git clone https://github.com/jaime00/easy-git.git
+cd easy-git
 npm install
 npm link
 ```
@@ -33,7 +33,7 @@ npm link
 Run the main command from the root of your Git repository:
 
 ```bash
-git-flow-js
+easy-git
 ```
 or
 
@@ -48,7 +48,17 @@ gfjs
 
 | Command | Description |
 | ---------------------------- | --------------------------------------------- |
-| `git-flow-js`, `gfjs`, `asd` | Run the interactive flow to manage branches (note: `asd` is a special Easter egg 🥚) |
+| `easy-git`, `gfjs`, `asd` | Run the interactive flow to manage branches (note: `asd` is a special Easter egg 🥚) |
+| `pull` | Pull from head |
+| `push` | Push to head |
+| `removelast` | Remove last commit |
+| `mergewith` | Merge with another origin branch |
+| `commit` | Commit changes |
+| `back` | Go back to previous branch |
+| `log` | Show commit log |
+| `run` | npm run dev |
+| `runrun` | Remove .next folder and run dev |
+| `i` | Install dependencies with auth token |
 | `-version`, `-v` | Display the installed version |
 | `-help`, `-h` *(under construction 🚧)* | Display help or usage information |
 
@@ -59,22 +69,52 @@ gfjs
 
 The project is organized in a modular fashion for easy maintenance and extension. The main directory and file structure is detailed below:
 ```
-git-flow-js/
+easy-git/
 ├── src/
-│ ├── actions/
-│ │ ├── createOriginalBranch.js
-│ │ ├── createTemporalBranch.js
-│ │ └── createBranchName.js
-│ ├── getters/
-│ │ ├── getCurrentPackageVersion.js
-│ │ ├── getBranchType.js
-│ │ ├── getTicketOfJIRA.js
-│ │ ├── getEnviroment.js
-│ │ └── getCurrentBranch.js
-│ └── utils/
-│ └── validateTicketOfJIRA.js
-├── index.js
+│   ├── actions/
+│   │   ├── git/
+│   │   │   ├── back.js
+│   │   │   ├── commit.js
+│   │   │   ├── createBranchName.js
+│   │   │   ├── createOriginalBranch.js
+│   │   │   ├── createTemporalBranch.js
+│   │   │   ├── mergewith.js
+│   │   │   ├── pull.js
+│   │   │   ├── push.js
+│   │   │   └── removelast.js
+│   │   └── install/
+│   │       ├── addNewConfig.js
+│   │       ├── dropCurrentConfig.js
+│   │       ├── generateNpmrc.js
+│   │       ├── getCurrentConfig.js
+│   │       └── showCurrentConfig.js
+│   ├── getters/
+│   │   ├── git/
+│   │   │   ├── getBranchType.js
+│   │   │   ├── getCurrentBranch.js
+│   │   │   ├── getCurrentPackageVersion.js
+│   │   │   ├── getEnviroment.js
+│   │   │   └── getTicketOfJIRA.js
+│   │   └── install/
+│   │       ├── config/
+│   │       │   └── getLastConfig.js
+│   │       ├── npm/
+│   │       │   ├── getRegistryName.js
+│   │       │   └── getRegistryURL.js
+│   │       └── token/
+│   │           ├── getApiKey.js
+│   │           └── getEndpointURL.js
+│   ├── utils/
+│   │   ├── handleUserCancellation.js
+│   │   ├── isEmpty.js
+│   │   └── validateTicketOfJIRA.js
+│   └── run-actions/
+│       └── commands.js
 ├── build.js
+├── git.js
+├── index.js
+├── install.js
+├── run.js
 ├── package.json
 └── README.md
 ```
@@ -87,15 +127,15 @@ git-flow-js/
 Contributions welcome! To get started:
 
 ```bash
-git clone https://github.com/jaime00/git-flow-js.git
-cd git-flow-js
+git clone https://github.com/jaime00/easy-git.git
+cd easy-git
 npm install
 npm link
-git-flow-js # or use the abbreviated version with gfjs or asd
+easy-git # or use the abbreviated version with gfjs or asd
 
 ```
 
-Please open an [issue](https://github.com/jaime00/git-flow-js/issues) to report bugs or suggest improvements.
+Please open an [issue](https://github.com/jaime00/easy-git/issues) to report bugs or suggest improvements.
 
 ---
 
@@ -114,6 +154,6 @@ Distributed under the MIT [License](LICENSE).
 - 📧 **Email**: [imjaimetorresv@gmail.com](mailto:imjaimetorresv@gmail.com)
 - 🐙 **GitHub**: [github.com/jaime00](https://github.com/jaime00)
 
-For contributions, bug reports, or suggestions, please open an [issue](https://github.com/jaime00/git-flow-js/issues) in the repository.
+For contributions, bug reports, or suggestions, please open an [issue](https://github.com/jaime00/easy-git/issues) in the repository.
 
 ---

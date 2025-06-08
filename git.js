@@ -1,9 +1,11 @@
 import { log } from '@clack/prompts'
-import pull from './src/actions/pull.js'
-import push from './src/actions/push.js'
-import removelast from './src/actions/removelast.js'
-import mergewith from './src/actions/mergewith.js'
-import commit from './src/actions/commit.js'
+import pull from './src/actions/git/pull.js'
+import push from './src/actions/git/push.js'
+import removelast from './src/actions/git/removelast.js'
+import mergewith from './src/actions/git/mergewith.js'
+import commit from './src/actions/git/commit.js'
+import back from './src/actions/git/back.js'
+import consolelog from './src/actions/git/log.js'
 
 const gitCommand = process.argv[1].split('/').pop()
 const args = process.argv.slice(2)
@@ -14,6 +16,8 @@ const commands = {
   removelast,
   mergewith: () => mergewith(args),
   commit: () => commit(args),
+  back,
+  log: consolelog
 }
 
 async function main() {

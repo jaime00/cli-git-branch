@@ -4,13 +4,13 @@ import chalk from 'chalk'
 import os from 'os'
 import path from 'path'
 
-import getEndpointURL from '../getters/install/token/getEndpointURL.js'
-import getApiKey from '../getters/install/token/getApiKey.js'
+import getEndpointURL from '../../getters/install/token/getEndpointURL.js'
+import getApiKey from '../../getters/install/token/getApiKey.js'
 
-import getRegistryName from '../getters/install/npm/getRegistryName.js'
-import getRegistryURL from '../getters/install/npm/getRegistryURL.js'
+import getRegistryName from '../../getters/install/npm/getRegistryName.js'
+import getRegistryURL from '../../getters/install/npm/getRegistryURL.js'
 
-import isEmpty from '../utils/isEmpty.js'
+import isEmpty from '../../utils/isEmpty.js'
 
 const addNewConfig = async () => {
   intro(`${chalk.hex('#57d7c4')('⚙️  Setting up your configuration')}`)
